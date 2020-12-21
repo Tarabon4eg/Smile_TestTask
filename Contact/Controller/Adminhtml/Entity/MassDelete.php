@@ -72,8 +72,7 @@ class MassDelete extends Action
         $this->filter = $filter;
         $this->collectionFactory = $collectionFactory;
         $this->contactEntityRepository = $contactEntityRepository;
-        $this->logger = $logger ?:
-            \Magento\Framework\App\ObjectManager::getInstance()->create(LoggerInterface::class);
+        $this->logger = $logger;
     }
 
     /**
