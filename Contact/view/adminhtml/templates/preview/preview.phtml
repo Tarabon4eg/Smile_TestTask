@@ -1,0 +1,57 @@
+<?php
+/** @var $block \Smile\Contact\Block\Adminhtml\Preview */
+?>
+
+<h2><?= __('Contact Entity Info'); ?></h2>
+<fieldset class="admin__fieldset">
+    <div class="admin__field">
+        <div class="admin__field-label">
+            <label>
+                <?= __('Contact Name'); ?>
+            </label>
+        </div>
+        <div class="admin__field-control">
+            <?= __($block->getName()); ?>
+        </div>
+    </div>
+    <div class="admin__field">
+        <div class="admin__field-label">
+            <label>
+                <?= __('Contact Email'); ?>
+            </label>
+        </div>
+        <div class="admin__field-control">
+            <?= $block->getEmail(); ?>
+        </div>
+    </div>
+    <div class="admin__field">
+        <div class="admin__field-label">
+            <label>
+                <?= __('Contact Telephone'); ?>
+            </label>
+        </div>
+        <div class="admin__field-control">
+            <?= $block->getTelephone() != null ? $block->getTelephone() : __('No Contact Telephone'); ?>
+        </div>
+    </div>
+    <div class="admin__field">
+        <div class="admin__field-label">
+            <label>
+                <?= __('Message'); ?>
+            </label>
+        </div>
+        <div class="admin__field-control">
+            <?= $block->getComment(); ?>
+        </div>
+    </div>
+    <div class="admin__field">
+        <div class="admin__field-label">
+            <label>
+                <?= __('Created at'); ?>
+            </label>
+        </div>
+        <div class="admin__field-control">
+            <?= $block->getCreatedAt(); ?>
+        </div>
+    </div>
+</fieldset>
