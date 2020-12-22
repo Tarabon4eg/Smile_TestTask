@@ -60,6 +60,7 @@ class MassDelete extends Action
      * @param Filter $filter
      * @param CollectionFactory $collectionFactory
      * @param ContactEntityRepositoryInterface $contactEntityRepository
+     * @param LoggerInterface $logger
      */
     public function __construct(
         Context $context,
